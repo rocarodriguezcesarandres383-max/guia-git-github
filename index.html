@@ -4,14 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto DOM</title>
+    <title>Guía paso a paso de Git y GitHub</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Mi primer proyecto con DOM</h1>
-    <p id="mensaje">Bienvenido a mi proyecto.</p>
-    <button id="boton">Haz clic aquí</button>
 
-    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+            text-align: left;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #24292e;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 25px auto;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        pre {
+            background: #222;
+            color: #00ff90;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Guía paso a paso de Git y GitHub</h1>
+    <p>Aprendiendo a crear proyectos, controlar versiones y subir repositorios.</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>1. Crear un proyecto en el escritorio</h2>
+        <p>Primero debemos crear una carpeta en el escritorio de nuestra computadora.</p>
+        <ol>
+            <li>Hacer clic derecho en el escritorio.</li>
+            <li>Seleccionar Nuevo y después Carpeta.</li>
+            <li>Asignar un nombre al proyecto.</li>
+            <li>Abrir Visual Studio Code.</li>
+            <li>Seleccionar Archivo y después Abrir carpeta.</li>
+            <li>Buscar y abrir la carpeta del proyecto.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>2. Inicializar Git</h2>
+        <p>Git permite controlar los cambios realizados en nuestro proyecto.</p>
+        <p>Abrimos la terminal de Visual Studio Code y ejecutamos:</p>
+        <pre>git init</pre>
+
+        <p>Configuramos nuestro nombre y correo electrónico:</p>
+        <pre>git config --global user.name "Tu Nombre"</pre>
+        <pre>git config --global user.email "tu correo"</pre>
+
+        <p>Para utilizar la rama principal llamada main:</p>
+        <pre>git branch -M main</pre>
+    </section>
+
+    <section>
+        <h2>3. Crear tres commits con descripción</h2>
+        <p>Los commits permiten guardar diferentes versiones de nuestro proyecto.</p>
+
+        <h3>Primer commit: estructura del proyecto</h3>
+        <pre>git add .
+git commit -m "Primer commit: crear estructura del proyecto"</pre>
+
+        <h3>Segundo commit: funcionalidad del DOM</h3>
+        <pre>git add .
+git commit -m "Segundo commit: agregar funcionalidad DOM"</pre>
+
+        <h3>Tercer commit: mejorar los estilos</h3>
+        <pre>git add .
+git commit -m "Tercer commit: mejorar estilos del proyecto"</pre>
+
+        <p>Para comprobar los tres commits ejecutamos:</p>
+        <pre>git log --oneline</pre>
+    </section>
+
+    <section>
+        <h2>4. Crear un repositorio público en GitHub</h2>
+        <p>GitHub es una plataforma que permite almacenar y compartir proyectos.</p>
+        <ol>
+            <li>Ingresar a <a href="https://github.com/" target="_blank">GitHub</a>.</li>
+            <li>Iniciar sesión con nuestra cuenta.</li>
+            <li>Presionar el botón New repository.</li>
+            <li>Escribir el nombre del repositorio.</li>
+            <li>Seleccionar la opción Public.</li>
+            <li>Presionar Create repository.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>5. Conectar el proyecto con GitHub</h2>
+        <p>Después de crear el repositorio, debemos conectar nuestra carpeta local con GitHub.</p>
+
+        <p>Copiamos la dirección HTTPS de nuestro repositorio y ejecutamos:</p>
+
+        <pre>git remote add origin URL_DE_TU_REPOSITORIO</pre>
+
+        <p>Comprobamos la conexión:</p>
+        <pre>git remote -v</pre>
+    </section>
+
+    <section>
+        <h2>6. Manipulación del DOM</h2>
+        <p>El DOM permite modificar el contenido de una página HTML mediante JavaScript.</p>
+
+        <p id="mensaje">Bienvenido a nuestra guía de Git y GitHub.</p>
+
+        <button id="boton">Probar manipulación del DOM</button>
+    </section>
+
+    <section>
+        <h2>7. Subir el proyecto a GitHub (Push)</h2>
+        <p>Para enviar nuestro proyecto al repositorio remoto ejecutamos:</p>
+
+        <pre>git push -u origin main</pre>
+
+        <p>Este comando permite subir los archivos y commits de nuestro proyecto a GitHub.</p>
+    </section>
+
+    <section>
+        <h2>8. Comprobar el repositorio</h2>
+        <p>Finalmente ingresamos a nuestro repositorio de GitHub y comprobamos que aparezcan los archivos del proyecto.</p>
+
+        <ul>
+            <li>index.html</li>
+            <li>style.css</li>
+            <li>script.js</li>
+        </ul>
+
+        <p>También podemos revisar el historial de commits para comprobar los cambios realizados.</p>
+    </section>
+
+    <section>
+        <h2>9. Evidencias para entregar</h2>
+        <p>Según las instrucciones de la actividad debemos presentar:</p>
+
+        <ul>
+            <li>Capturas del trabajo realizado con Git.</li>
+            <li>Capturas de los tres commits con sus descripciones.</li>
+            <li>Captura del repositorio de GitHub con los archivos.</li>
+            <li>Enlace público del repositorio de GitHub.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>Proyecto práctico - Git y GitHub</p>
+    <p>Aprendiendo a controlar versiones y manipular el DOM.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
